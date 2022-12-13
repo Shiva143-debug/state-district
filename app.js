@@ -158,8 +158,8 @@ select state_name as stateName from state
  where state_id = ${getDistrictIdQueryResponse.state_id};
 `;
   //With this we will get state_name as stateName using the state_id
-  const getStateNameQueryResponse = await database.get(getStateNameQuery);
-  response.send(getStateNameQueryResponse);
+  const getStateNameResponse = await database.get(getStateNameQuery);
+  response.send(getStateNameResponse);
 });
 
 module.exports = app;
